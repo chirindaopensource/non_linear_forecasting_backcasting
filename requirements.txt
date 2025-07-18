@@ -1,0 +1,111 @@
+﻿# ==============================================================================#
+#
+#  REQUIREMENTS.TXT
+#  
+#  Nonlinear Fore(Back)casting and Innovation Filtering for Causal-Noncausal VAR Models
+#  Professional-grade Python implementation of Gourieroux-Jasiak (2022) framework
+#
+#  This file specifies the exact dependency versions required for reproducible
+#  execution of the mixed causal-noncausal VAR modeling framework. Version
+#  constraints are based on:
+#  • Numerical stability requirements for eigenvalue decomposition algorithms
+#  • Computational accuracy demands for nonlinear optimization procedures
+#  • Statistical robustness needs for kernel density estimation methods
+#  • Parallel processing reliability for bootstrap uncertainty quantification
+#
+#  Installation: pip install -r requirements.txt
+#
+#  Author: CS Chirinda
+#  License: MIT
+#  Version: 1.0.0
+#
+# ==============================================================================#
+
+# --- CORE SCIENTIFIC COMPUTING STACK ---
+# Fundamental numerical computation and data manipulation libraries
+# These versions ensure numerical stability for eigenvalue decomposition
+# and robust time series data handling capabilities
+
+numpy>=1.20.0,<2.0.0
+# - Version 1.20.0+: Stable eigenvalue decomposition algorithms critical for Jordan decomposition
+# - Version 1.20.0+: Improved numerical precision for matrix operations in VAR estimation
+# - Upper bound <2.0.0: Prevents breaking changes in major version update
+
+pandas>=1.3.0,<2.0.0
+# - Version 1.3.0+: Enhanced time series functionality for VAR data preparation
+# - Version 1.3.0+: Improved datetime indexing required for quarterly data alignment
+# - Version 1.3.0+: Stable DataFrame operations for econometric data transformations
+
+# --- ADVANCED SCIENTIFIC COMPUTING ---
+# Sophisticated numerical methods for optimization, integration, and statistical analysis
+# These versions provide the computational foundation for the econometric methodology
+
+scipy>=1.7.0,<2.0.0
+# - Version 1.7.0+: Stable optimize.minimize with multiple algorithm support for GCov estimation
+# - Version 1.7.0+: Robust gaussian_kde implementation for nonparametric density estimation
+# - Version 1.7.0+: Reliable integration routines for predictive density calculations
+# - Version 1.7.0+: Improved linear algebra functions for companion matrix operations
+
+# --- STATISTICAL AND ECONOMETRIC ANALYSIS ---
+# Specialized libraries for time series analysis and statistical modeling
+# Required for VAR model diagnostics and econometric validation procedures
+
+statsmodels>=0.12.0,<0.15.0
+# - Version 0.12.0+: Robust time series plotting functionality for ACF diagnostics
+# - Version 0.12.0+: Stable statistical tests for model validation
+# - Version 0.12.0+: Improved econometric modeling tools
+# - Upper bound <0.15.0: Prevents potential API changes in future versions
+
+# --- PARALLEL PROCESSING INFRASTRUCTURE ---
+# High-performance computing support for bootstrap methods and Monte Carlo simulations
+# Essential for computationally intensive uncertainty quantification procedures
+
+joblib>=1.0.0,<2.0.0
+# - Version 1.0.0+: Thread-safe parallel processing for bootstrap procedures
+# - Version 1.0.0+: Efficient memory management for large-scale simulations
+# - Version 1.0.0+: Stable delayed execution for Monte Carlo methods
+# - Upper bound <2.0.0: Maintains compatibility with current API
+
+# --- VISUALIZATION AND PLOTTING ---
+# Publication-quality graphics for model diagnostics and research presentation
+# Required for generating figures consistent with academic standards
+
+matplotlib>=3.3.0,<4.0.0
+# - Version 3.3.0+: Consistent figure formatting and layout management
+# - Version 3.3.0+: Stable subplot organization for diagnostic plots
+# - Version 3.3.0+: Reliable export functionality for publication-quality figures
+# - Upper bound <4.0.0: Prevents breaking changes in major version update
+
+seaborn>=0.11.0,<0.13.0
+# - Version 0.11.0+: Modern statistical plot aesthetics for research presentation
+# - Version 0.11.0+: Enhanced distribution visualization for density plots
+# - Version 0.11.0+: Improved correlation and regression plot functionality
+# - Upper bound <0.13.0: Maintains current API compatibility
+
+# --- DEVELOPMENT AND TESTING (OPTIONAL) ---
+# Uncomment the following section for development environment setup
+# These packages are not required for production execution but enhance development workflow
+
+# pytest>=6.0.0,<8.0.0
+# - Unit testing framework for model validation and regression testing
+# - Version 6.0.0+: Modern fixture support and parametrized testing capabilities
+
+# black>=21.0.0,<24.0.0
+# - Code formatting tool for consistent style adherence
+# - Version 21.0.0+: Stable formatting rules for professional code presentation
+
+# mypy>=0.910,<2.0.0
+# - Static type checking for enhanced code reliability
+# - Version 0.910+: Improved type inference for scientific computing libraries
+
+# flake8>=3.9.0,<6.0.0
+# - Code linting tool for style and error detection
+# - Version 3.9.0+: Enhanced plugin support for scientific Python codebases
+
+# jupyter>=1.0.0,<2.0.0
+# - Notebook environment for interactive development and presentation
+# - Version 1.0.0+: Stable kernel management and widget support
+
+# ==============================================================================#
+# END OF REQUIREMENTS.TXT
+# ==============================================================================#
