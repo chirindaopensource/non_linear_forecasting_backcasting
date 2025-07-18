@@ -286,3 +286,7 @@ GitHub repository: https://github.com/chirindaopensource/non_linear_forecasting_
 
 -   Credit to Christian Gourieroux and Joann Jasiak for their foundational theoretical and empirical work.
 -   Thanks to the developers of the `pandas`, `numpy`, `scipy`, `matplotlib`, `statsmodels`, and `joblib` libraries, which provide the essential toolkit for this implementation.
+
+--
+
+This README was generated based on the structure and content of non_linear_forecasting_backcasting_draft.ipynb and follows best practices for research software documentation.
